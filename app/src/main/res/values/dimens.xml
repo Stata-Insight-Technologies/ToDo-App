@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_start">190dp</dimen>
+    <dimen name="delete_start_margin">40dp</dimen>
+    <dimen name="layout_start_margin">16dp</dimen>
+    <dimen name="top_margin">20dp</dimen>
+</resources>

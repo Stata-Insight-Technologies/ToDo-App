@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".DeleteFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_diagnosis"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginStart="@dimen/layout_start_margin"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_currentDiagnosis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_start_margin"
+        android:layout_marginEnd="@dimen/layout_start_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/content_display"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/history_of_survey"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginStart="@dimen/layout_start_margin"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_surveyHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_start_margin"
+        android:layout_marginEnd="@dimen/layout_start_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/content_display"/>
+
+
+
+</LinearLayout>
