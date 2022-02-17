@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DeleteFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_start_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_marginEnd="@dimen/layout_start_margin"
+        android:layout_marginBottom="35dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:clickable="true"
+            android:contentDescription="@string/back_button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_activity"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="25dp"/>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,8 +79,54 @@
         android:layout_marginStart="@dimen/layout_start_margin"
         android:layout_marginEnd="@dimen/layout_start_margin"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/content_display"/>
-
-
-
+        tools:listitem="@layout/content_display" />
 </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:weightSum="1">
+
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/cancel"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@color/deep_grey"
+            android:fontFamily="@font/roboto"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/cancel_background"
+            style="@style/Button.NoCap.Radius16"/>
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/delete"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@color/delete_color"
+            android:fontFamily="@font/roboto"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/delete_background"
+            style="@style/Button.NoCap.Radius28"/>
+
+    </LinearLayout>
+</FrameLayout>

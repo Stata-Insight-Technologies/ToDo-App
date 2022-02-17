@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.todoapp.databinding.FragmentHomeBinding
 
@@ -33,6 +34,18 @@ class HomeFragment : Fragment() {
 
         binding.delete.setOnClickListener {
             findNavController().navigate(R.id.to_deleteFragment)
+        }
+
+        binding.backArrow.setOnClickListener {
+            Toast.makeText(requireContext(),"Back to HomeScreen", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.edit.setOnClickListener {
+            Toast.makeText(requireContext(),"To edit the Todos", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.fab.setOnClickListener {
+            Toast.makeText(requireContext(),"Create a new Todo", Toast.LENGTH_SHORT).show()
         }
 
     }

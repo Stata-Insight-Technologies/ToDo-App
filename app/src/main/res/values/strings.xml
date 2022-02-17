@@ -13,4 +13,7 @@
     <string name="septic_embolization">Septic Embolization</string>
     <string name="date">20 April 2021</string>
     <string name="history_of_survey">History of Survey</string>
+    <string name="delete_activity">Delete Activity</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
 </resources>

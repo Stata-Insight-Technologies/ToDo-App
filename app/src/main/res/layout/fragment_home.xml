@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     tools:context=".HomeFragment">
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_arrow_back_24"
-            android:background="@drawable/background_small"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:focusable="true"
             android:clickable="true"
             android:contentDescription="@string/back_button"/>
@@ -32,7 +40,7 @@
             android:src="@drawable/ic_edit_24"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/margin_start"
-            android:background="@drawable/background_small"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
             android:contentDescription="@string/edit_todo_entries"/>
@@ -41,9 +49,10 @@
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
             android:src="@drawable/ic_delete_24"
             android:layout_gravity="right"
-            android:background="@drawable/background_small"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:focusable="true"
             android:clickable="true"
             android:contentDescription="@string/delete_todo_item"/>
@@ -116,7 +125,7 @@
                android:layout_width="0dp"
                android:layout_weight="1"
                android:layout_height="80dp"
-               android:layout_gravity="left"
+               android:layout_gravity="start"
                android:orientation="vertical"
                android:background="@drawable/white_curve_bk">
 
@@ -246,5 +255,14 @@
         android:layout_marginEnd="@dimen/layout_start_margin"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/content_display"/>
-
 </androidx.appcompat.widget.LinearLayoutCompat>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector"
+        android:background="@color/deep_gold"
+        app:backgroundTintMode="src_atop"
+        app:backgroundTint="@color/deep_gold"
+        android:layout_gravity="center_horizontal|bottom"/>
+</FrameLayout>

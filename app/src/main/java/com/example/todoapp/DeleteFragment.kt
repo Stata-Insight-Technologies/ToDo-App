@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.example.todoapp.databinding.FragmentDeleteBinding
 
 class DeleteFragment : Fragment() {
@@ -29,6 +31,18 @@ class DeleteFragment : Fragment() {
         binding.rvSurveyHistory.adapter = SurveyHistoryAdapter(requireContext(), surveyHistory)
 
         binding.rvCurrentDiagnosis.adapter = CurrentDiagnosisAdapter(requireContext(), currentDiagnosis)
+
+        binding.backArrow.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        binding.tvCancel.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        binding.tvDelete.setOnClickListener {
+            Toast.makeText(requireContext(),"Delete a select content", Toast.LENGTH_SHORT).show()
+        }
     }
 
 

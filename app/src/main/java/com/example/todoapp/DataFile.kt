@@ -31,6 +31,27 @@ val surveyHistory = listOf(TodoModel(
         R.drawable.ic_frame_blood,"Blood Pressure", currentDate),
     TodoModel(
         R.drawable.ic_frame_conical,"Laboratory tests", currentDate),
+
+    TodoModel(
+        R.drawable.ic_frame_temp,"Body Temperature", currentDate),
+    TodoModel(
+        R.drawable.ic_frame_blood,"Blood Pressure", currentDate),
+    TodoModel(
+        R.drawable.ic_frame_conical,"Laboratory tests", currentDate),
+
+    TodoModel(
+        R.drawable.ic_frame_temp,"Body Temperature", currentDate),
+    TodoModel(
+        R.drawable.ic_frame_blood,"Blood Pressure", currentDate),
+    TodoModel(
+        R.drawable.ic_frame_conical,"Laboratory tests", currentDate),
+
+    TodoModel(
+        R.drawable.ic_frame_temp,"Body Temperature", currentDate),
+    TodoModel(
+        R.drawable.ic_frame_blood,"Blood Pressure", currentDate),
+    TodoModel(
+        R.drawable.ic_frame_conical,"Laboratory tests", currentDate),
 )
 
 val currentDiagnosis = listOf(TodoModel(

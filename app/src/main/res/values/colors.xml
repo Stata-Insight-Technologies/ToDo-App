@@ -14,4 +14,6 @@
     <color name="text_color_first_level">#504E44</color>
     <color name="text_color_second_level">#44504B</color>
     <color name="grey">#7D8883</color>
+    <color name="deep_grey">#44504B</color>
+    <color name="delete_color">#FD295A</color>
 </resources>
