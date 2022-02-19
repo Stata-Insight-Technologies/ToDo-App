@@ -7,10 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import java.text.SimpleDateFormat
 import java.util.*
 
-class SurveyHistoryAdapter(private val context: Context, val surveyHistory: List<TodoModel>)
+class SurveyHistoryAdapter(private val context: Context, private val surveyHistory: List<HistorySurveyDiagnosis>)
     : RecyclerView.Adapter<SurveyHistoryAdapter.SurveyHistoryViewHolder>() {
 
 
@@ -20,9 +19,9 @@ class SurveyHistoryAdapter(private val context: Context, val surveyHistory: List
     }
 
     override fun onBindViewHolder(holder: SurveyHistoryViewHolder, position: Int) {
-        holder.image.setImageResource(surveyHistory[position].image)
-        holder.name.text = surveyHistory[position].name
-        holder.date.text = getFormattedDate(surveyHistory[position].date)
+        holder.image.setImageResource(R.drawable.ic_frame_lungs)
+        holder.name.text = surveyHistory[position].diagnosis_name
+        holder.date.text = surveyHistory[position].date
     }
 
     override fun getItemCount(): Int {

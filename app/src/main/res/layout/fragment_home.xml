@@ -76,8 +76,8 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/ibrahim"
-                android:layout_marginStart="20.5dp"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -130,6 +130,7 @@
                android:background="@drawable/white_curve_bk">
 
                <TextView
+                   android:id="@+id/age1"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_gravity="center_horizontal"
@@ -161,6 +162,7 @@
                 android:background="@drawable/white_curve_bk">
 
                 <TextView
+                    android:id="@+id/age2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -192,6 +194,7 @@
                 android:background="@drawable/white_curve_bk">
 
                 <TextView
+                    android:id="@+id/age3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -217,45 +220,60 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/current_diagnosis"
-        android:textColor="@color/grey"
-        android:textSize="14sp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/roboto"
-        android:layout_marginStart="@dimen/layout_start_margin"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_currentDiagnosis"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/layout_start_margin"
-        android:layout_marginEnd="@dimen/layout_start_margin"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/content_display"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/history_of_survey"
-        android:textColor="@color/grey"
-        android:textSize="14sp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/roboto"
-        android:layout_marginStart="@dimen/layout_start_margin"
-        android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_surveyHistory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/layout_start_margin"
-        android:layout_marginEnd="@dimen/layout_start_margin"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/content_display"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_diagnosis"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/roboto"
+                android:layout_marginStart="@dimen/layout_start_margin"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_currentDiagnosis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_start_margin"
+                android:layout_marginEnd="@dimen/layout_start_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/content_display"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/history_of_survey"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/roboto"
+                android:layout_marginStart="@dimen/layout_start_margin"
+                android:layout_marginTop="20dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_surveyHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_start_margin"
+                android:layout_marginEnd="@dimen/layout_start_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/content_display"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.appcompat.widget.LinearLayoutCompat>
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"

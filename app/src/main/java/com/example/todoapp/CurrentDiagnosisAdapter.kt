@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CurrentDiagnosisAdapter(val context: Context, val currentDiagnosis: List<TodoModel>)
+class CurrentDiagnosisAdapter(private val context: Context, private val currentDiagnoses: List<CurrentDiagnosis>)
     : RecyclerView.Adapter<CurrentDiagnosisAdapter.CurrentDiagnosisViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CurrentDiagnosisViewHolder {
@@ -17,13 +17,13 @@ class CurrentDiagnosisAdapter(val context: Context, val currentDiagnosis: List<T
     }
 
     override fun onBindViewHolder(holder: CurrentDiagnosisViewHolder, position: Int) {
-        holder.image.setImageResource(currentDiagnosis[position].image)
-        holder.name.text= currentDiagnosis[position].name
-        holder.date.text = getFormattedDate(currentDiagnosis[position].date)
+        holder.image.setImageResource(R.drawable.ic_frame_temp)
+        holder.name.text= currentDiagnoses[position].diagnosis_name
+        holder.date.text = currentDiagnoses[position].date
     }
 
     override fun getItemCount(): Int {
-        return currentDiagnosis.size
+        return currentDiagnoses.size
     }
 
     inner class CurrentDiagnosisViewHolder(private val view: View): RecyclerView.ViewHolder(view){
